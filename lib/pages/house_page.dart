@@ -66,53 +66,53 @@ class _HousePageState extends State<HousePage> {
                         ),
                       ],
                     ),
-                    Stack(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.greenAccent,
-                            // borderRadius: BorderRadius.circular(12.0)
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white, width: 0.5),
-                          ),
-                          // padding: EdgeInsets.all(8),
-                          //color: Colors.red,
-                          child: CircleAvatar(
-                            backgroundColor: Colors.black87.withOpacity(0.02),
-                            backgroundImage: NetworkImage(
-                              "https://images.pexels.com/photos/1755385/pexels-photo-1755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-                            ),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  bottom: 2,
-                                  right: -1.4,
-                                  child: Container(
-                                    height: 16,
-                                    width: 16,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: Colors.black54, width: 1.4),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  bottom: 2,
-                                  right: -1.6,
-                                  child: Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                    size: 15,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    // Stack(
+                    //   children: [
+                    //     Container(
+                    //       decoration: BoxDecoration(
+                    //         color: Colors.greenAccent,
+                    //         // borderRadius: BorderRadius.circular(12.0)
+                    //         shape: BoxShape.circle,
+                    //         border: Border.all(color: Colors.white, width: 0.5),
+                    //       ),
+                    //       // padding: EdgeInsets.all(8),
+                    //       //color: Colors.red,
+                    //       child: CircleAvatar(
+                    //         backgroundColor: Colors.black87.withOpacity(0.02),
+                    //         backgroundImage: NetworkImage(
+                    //           "https://images.pexels.com/photos/1755385/pexels-photo-1755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                    //         ),
+                    //         child: Stack(
+                    //           children: [
+                    //             Positioned(
+                    //               bottom: 2,
+                    //               right: -1.4,
+                    //               child: Container(
+                    //                 height: 16,
+                    //                 width: 16,
+                    //                 decoration: BoxDecoration(
+                    //                   color: Colors.greenAccent,
+                    //                   shape: BoxShape.circle,
+                    //                   border: Border.all(
+                    //                       color: Colors.black54, width: 1.4),
+                    //                 ),
+                    //               ),
+                    //             ),
+                    //             Positioned(
+                    //               bottom: 2,
+                    //               right: -1.6,
+                    //               child: Icon(
+                    //                 Icons.add,
+                    //                 color: Colors.white,
+                    //                 size: 15,
+                    //               ),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                     Container(
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
@@ -421,7 +421,7 @@ class _HousePageState extends State<HousePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Color(0xff389FFD),
         onTap: (index) {
           setState(() {
             _paginaActual = index;
@@ -429,11 +429,30 @@ class _HousePageState extends State<HousePage> {
         },
         currentIndex: _paginaActual,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: "Favorite"),
+            icon: Icon(
+              Icons.home,
+              color: Color(0xffEFF4FD),
+            ),
+            label: "Home",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite), label: "Favorite"),
+              icon: Icon(
+                Icons.person,
+                color: Color(0xffEFF4FD),
+              ),
+              label: "Login"),
+          BottomNavigationBarItem(
+            activeIcon: Icon(
+              Icons.local_parking,
+              color: Color(0xffEFF4FD),
+            ),
+            icon: Icon(
+              Icons.local_parking,
+              color: Color(0xffEFF4FD),
+            ),
+            label: "Parking",
+          ),
         ],
       ),
     );
